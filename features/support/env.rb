@@ -1,10 +1,11 @@
 require 'capybara'
 require 'capybara/cucumber'
-require "faker"
+require 'faker'
+require 'cpf_faker'
 require 'httparty'
-require "json"
-require "mysql2"
-require "rspec"
+require 'json'
+require 'mysql2'
+require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 

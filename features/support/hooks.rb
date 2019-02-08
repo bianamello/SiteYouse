@@ -3,6 +3,10 @@ Before do
     @cadastro = CadastroPage.new
     @login = LoginPage.new
     @areaLogada = AreaLogadaPage.new
+    @paginaInfos = SeguroInfosPage.new
+    @cotacaoAuto = CotacaoAutoPage.new
+    @coberturaAssistencia = CoberturaAssistenciaPage.new
+    @personalizar = PersonalizarSeguroPage.new
 end
 
 After do |scenario|  
