@@ -15,5 +15,5 @@ After do |scenario|
     nome_cenario = nome_cenario.sub(/Exemplos/, '')
     
     # Chama função que tira print no final de cada cenário
-    screenshot(nome_cenario)
+    # screenshot(nome_cenario)
 end

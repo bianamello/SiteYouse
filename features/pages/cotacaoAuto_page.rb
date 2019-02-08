@@ -53,20 +53,22 @@ class CotacaoAutoPage < SitePrism::Page
         select_opcaoDorme.click
         input_cpf.set cpf
         
-        input_nomeCompleto.set nomeCompleto
-        select_sexo.click
-        select_sexoFeminino.click
-        input_dataNascimento.set dataNascimento
-
-        select_nascionalidade.click
-        select_renda.click
-        select_rendaMinima.click
         select_estadoCivil.click
         select_estadoCivilSolteiro.click
         select_declaro.click
         select_declaroTrue.click
         select_sinistro.click
         select_sinistroOpcaoNunca.click
+
+        # input_nomeCompleto.set nomeCompleto
+        # select_sexo.click
+        # select_sexoFeminino.click
+        # input_dataNascimento.set dataNascimento
+
+        # select_nascionalidade.click
+        # select_renda.click
+        # select_rendaMinima.click
+              
         botao_proximoPasso.click
     end
 

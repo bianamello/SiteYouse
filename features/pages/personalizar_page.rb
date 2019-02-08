@@ -1,12 +1,10 @@
 class PersonalizarSeguroPage < SitePrism::Page
 
-    element :selecionaPerdaTotal, '#edit_auto_order_flow_coverages_selection_14782946 > ul > li.coverage-group.auto-completo > div.coverage-group__content > div > div > ul > li:nth-child(1) > div.coverage__action-box > div > label'
-    
-    # element :selecionaPerdaTotal, 'input[id="switch_67367274117695498648592862445944679444"]'
-    element :selecionaQualquerBatida, 'label[for="switch_190557334854951259081483606012882028656"]'
-    element :selecionaReparoSimples, 'label[for="switch_33880955802405169762672047579764667507"]'
-    element :selecionaMotorista, 'label[for="switch_51058870826434498864904604674007616441"]'
-    element :selecionaHigienizacao, 'label[for="switch_111218040692047572139464592786509832453"]'
+    element :selecionaPerdaTotal, '.coverages-list__item:nth-child(1) label'
+    element :selecionaQualquerBatida, '.coverages-list__item:nth-child(3) label'
+    element :selecionaReparoSimples, '.assistance:nth-child(4) label'
+    element :selecionaMotorista, '.assistance:nth-child(6) label'
+    element :selecionaHigienizacao, '.assistance:nth-child(7) label'
     element :selectBlindado, '#auto_order_flow_vehicle_data_vehicle_attributes_bullet_proof'
     element :blindadoNao, 'select[id*="bullet_proof"] > option[value="false"]'
 

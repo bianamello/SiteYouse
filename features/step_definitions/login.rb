@@ -4,7 +4,6 @@ Dado("que eu tenho uma conta criada no site da Youse") do
     @login.abrirCadastro
     @dados = gerarDadosParaCadastro
     @cadastro.cadastrar(@dados[0], @dados[1], @dados[2])
-    screenshot(nome_cenario = 'Cadastro')
     @areaLogada.sairAreaLogada
 end
 
@@ -28,7 +27,6 @@ end
 Quando("faço login com os seguintes dados incorretos:") do |table|
     @dadosLoginInvalido = table.rows_hash    
     @login.logar(@dadosLoginInvalido['email'], @dadosLoginInvalido['senha'])
-    screenshot(nome_cenario = 'LoginInvalido_1')
 end
 
 Entao("devo ver uma {string} de alerta") do |mensagem|

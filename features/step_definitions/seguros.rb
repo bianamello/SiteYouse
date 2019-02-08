@@ -30,8 +30,8 @@ end
 Entao("posso realizar uma cotação") do
     @paginaInfos.abrirCotacao
     @dados = gerarDadosParaCadastro
-    @cotacaoAuto.preencherCotacao(@dados[0], @dados[3], @dados[1], @dados[4], @dados[5], 
-    @dados[6], @dados[7], @dados[8], @dados[9], @dados[10], @dados[11], @dados[12])
+    @cotacaoAuto.preencherCotacao('Fabiana', @dados[3], @dados[1], @dados[4], @dados[5], 
+    @dados[6], @dados[7], @dados[8], @dados[9], @dados[10], 'Pinheiro de Mello', @dados[12])
     screenshot(nome_cenario = 'Cotacao')
 end
 
@@ -51,16 +51,15 @@ Entao("selecionar o menor preço") do
 end
 
 Entao("personalizar meu seguro e ver a pagina de pagamentos") do
-    # @personalizar.selecionaCoberturas
+    @personalizar.selecionaCoberturas
     @personalizar.proximoPasso
-    # @personalizar.selecionaAssistencias
+    @personalizar.selecionaAssistencias
     @personalizar.proximoPasso
     @personalizar.meusDados
     screenshot(nome_cenario = 'PaginaFinalizandoCotacao')
     @personalizar.proximoPasso
-    screenshot(nome_cenario = 'VoltouPaginaInicial')
-    # Obs: Após pagina "3/4 Meus Dados" o sistema está direciomando para 
-    # pagina inicial "1/4 Cotação" informando que "nome deve ser igual ao CPF".
-    # Sendo assim, nao foi possivel visualizar a pagina de pagamentos.
+    screenshot(nome_cenario = 'NaoAprovouSeguro')
+    # Obs: Após pagina "3/4 Meus Dados" o sistema não está aceitando meu CPF, e por isso não consigo chegar na pagina de pagamentos
+    # Ver os prints do Teste
 end
 
