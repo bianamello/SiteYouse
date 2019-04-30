@@ -11,7 +11,7 @@ def gerarDadosParaCadastro
     cidade = Faker::Address.city                      #7
     rua = Faker::Address.street_name                  #8
     numero = Faker::Number.number(3)                  #9
-    cpf = '346.518.168-94'                            #10
+    cpf = '888.888.888-88'                            #10
     nomeCompleto = "#{nome} #{Faker::Name.last_name}" #11
     dataNascimento = '08/01/1987'                     #12
 
